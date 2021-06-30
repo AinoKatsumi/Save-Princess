@@ -204,10 +204,10 @@ int main()
     int Window_height = 600;
     sf::RenderWindow window(sf::VideoMode(Window_width, Window_height), "SFML works!");
     //system("dir");
-    Ship ship(window.getSize().x / 2, window.getSize().y / 2, "ship.png", 4);
+    Ship ship(window.getSize().x / 2, window.getSize().y / 2, "tex/ship.png", 4);
     sf::Clock clock;
 
-    Enemy enemy("enemy.png");
+    Enemy enemy("tex/enemy.png");
     int enemy_count = 8;
     std::vector<Enemy> enemy_vector;
     for (int i = 0; i < enemy_count; i++)
@@ -225,9 +225,9 @@ int main()
         enemy_vector_second.push_back(enemy);
     }
 
-    Bullet bullet("bullet.png");
-    Bullet boss_bullet("bullet.png");
-    Boss boss("enemy.png", 10);
+    Bullet bullet("tex/bullet.png");
+    Bullet boss_bullet("tex/bullet.png");
+    Boss boss("tex/enemy.png", 10);
     sf::Vector2f v2(window.getSize().x / 2, 20);
     boss.enemy.setPosition(v2);
     int counter = 0;
